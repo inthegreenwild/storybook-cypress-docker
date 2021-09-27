@@ -2,7 +2,6 @@
 
 A vue app with storybook that's tested using cypress within docker. 
 
-> TODO: run against built storybook 
 > TODO: implement visual regression tests with Cypress 
 
 ## Usage
