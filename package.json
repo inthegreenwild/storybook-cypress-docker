@@ -1,0 +1,21 @@
+{
+  "name": "vue-cypress-storybook",
+  "version": "1.0.0",
+  "description": "Vue app with cypress and storybook running in docker",
+  "scripts": {
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up --abort-on-container-exit --exit-code-from e2e"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "cypress",
+    "vue",
+    "storybook",
+    "example",
+    "docker",
+    "docker-compose"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+# In .dockerignore
+# Exclude everything:
+#
+*
+
+# Now un-exclude package.json and the app folder:
+#
+!src
+!public
+!package.json
+!index.html
+!package-lock.json
+!vite.config.js
+!.storybook

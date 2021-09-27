@@ -1,0 +1,24 @@
+version: '3'
+services:
+  web:
+    image: node
+    build: ./app
+    container_name: node
+    restart: always
+    # we can see the server running at "localhost:8080"
+    ports:
+      - "6006:6006"
+
+
+  e2e:
+    image: cypress
+    build: ./e2e
+    container_name: cypress
+    depends_on:
+      - web
+    environment:
+      - CYPRESS_baseUrl=http://web:6006
+    command: npx cypress run
+    volumes:
+      - ./e2e/cypress:/app/cypress
+      - ./e2e/cypress.json:/app/cypress.json
